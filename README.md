@@ -31,6 +31,10 @@ Arrow keys - Move the ship
 - [ ] Individual boss ships with much more health that players must destroy to end a wave
 - [ ] Multiplayer functionality where two players can co-op in the same game (websockets)
 
+### Wireframe
+
+
+
 ## Architecture and Technologies
 - Vanilla JavaScript for game logic and overall structure
 - HTML5 Canvas for rendering
