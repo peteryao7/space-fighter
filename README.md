@@ -33,7 +33,7 @@ Arrow keys - Move the ship
 
 ### Wireframe
 
-
+![wireframe](https://raw.githubusercontent.com/peteryao7/space-fighter/master/space-fighter-wireframe.png)
 
 ## Architecture and Technologies
 - Vanilla JavaScript for game logic and overall structure
