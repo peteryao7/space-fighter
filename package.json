@@ -1,0 +1,29 @@
+{
+  "name": "space-fighter",
+  "version": "1.0.0",
+  "description": "(Link to live site)",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peteryao7/space-fighter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peteryao7/space-fighter/issues"
+  },
+  "homepage": "https://github.com/peteryao7/space-fighter#readme",
+  "devDependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
