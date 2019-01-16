@@ -12,7 +12,7 @@ class Game {
   constructor(ctx) {
     this.ctx = ctx;
     this.gameSize = { x: 1000, y: 600 };
-    this.difficulty = 0.90;
+    this.difficulty = 0.995;
     this.bodies = this.createEnemies(this.difficulty).concat([
       new PlayerShip(this, this.gameSize)
     ]);
@@ -68,14 +68,14 @@ class Game {
 
     
     let enemy_ctr = 0;
-    // refresh enemies of 24 if none are left
+    // refresh enemies if none are left
     for(let j = 0; j < this.bodies.length; j++) {
       if (this.bodies[j] instanceof EnemyShip)
       enemy_ctr += 1;
     }
     
     if (enemy_ctr === 0) {
-      this.difficulty = this.difficulty - 0.05
+      this.difficulty = this.difficulty - 0.075
       this.wave += 1;
       this.bodies = this.createEnemies(this.difficulty).concat([
         new PlayerShip(this, this.gameSize)
