@@ -22,14 +22,14 @@ class Game {
     this.animate();
   }
 
-  createEnemies(difficulty) {
+  createEnemies() {
     let enemies = [];
     let x, y;
     for(let j = 0; j < 14; j++) {
       x = 75 + (j * 81);
       for(let k = 0; k < 3; k++) {
         y = 75 + (k * 60);
-        enemies.push(new EnemyShip(this, { x, y }, difficulty, Math.random())); 
+        enemies.push(new EnemyShip(this, { x, y }, this.difficulty, Math.random())); 
       }
     }
     return enemies;
@@ -38,6 +38,8 @@ class Game {
   animate() {
     this.drawBackground(this.ctx);
     let death = this.isPlayerDead();
+
+    console.log(this.difficulty)
 
     if(death) {
       this.gameOver();
@@ -77,7 +79,7 @@ class Game {
     if (enemy_ctr === 0) {
       this.difficulty = this.difficulty - 0.075
       this.wave += 1;
-      this.bodies = this.createEnemies(this.difficulty).concat([
+      this.bodies = this.createEnemies().concat([
         new PlayerShip(this, this.gameSize)
       ]);
     }
