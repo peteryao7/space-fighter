@@ -13,6 +13,7 @@ The score system is dependent on how many enemies you kill and what kind of enem
 ## In-game Instructions
 
 Arrow keys - Move the ship
+Z - Shoot
 
 ## Functionality & MVPs
 - [ ] Create player ship that moves around the game screen
