@@ -1,6 +1,6 @@
 import Bullet from "./bullet";
 const shipImage = new Image();
-shipImage.src = "../dist/ships.png";
+shipImage.src = "../ships.png";
 
 class EnemyShip {
   constructor(game, center, difficulty, image) {

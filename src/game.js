@@ -3,16 +3,16 @@ import PlayerShip from "./player_ship";
 import Bullet from "./bullet";
 
 const shipImage = new Image();
-shipImage.src = "../dist/ships.png";
+shipImage.src = "../ships.png";
 
 const playerImage = new Image();
-playerImage.src = "../dist/ships.png";
+playerImage.src = "../ships.png";
 
 class Game {
   constructor(ctx) {
     this.ctx = ctx;
     this.gameSize = { x: 1000, y: 600 };
-    this.difficulty = 0.995; 
+    this.difficulty = 0.7; 
     this.bodies = this.createEnemies(this.difficulty).concat([
       new PlayerShip(this, this.gameSize)
     ]);
