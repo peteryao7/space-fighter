@@ -3,16 +3,16 @@ import PlayerShip from "./player_ship";
 import Bullet from "./bullet";
 
 const shipImage = new Image();
-shipImage.src = "../ships.png";
+shipImage.src = "../dist/ships.png";
 
 const playerImage = new Image();
-playerImage.src = "../ships.png";
+playerImage.src = "../dist/ships.png";
 
 class Game {
   constructor(ctx) {
     this.ctx = ctx;
     this.gameSize = { x: 1000, y: 600 };
-    this.difficulty = 0.7; 
+    this.difficulty = 0.94; 
     this.bodies = this.createEnemies(this.difficulty).concat([
       new PlayerShip(this, this.gameSize)
     ]);
@@ -39,7 +39,6 @@ class Game {
     this.drawBackground(this.ctx);
     let death = this.isPlayerDead();
 
-    console.log(this.difficulty)
 
     if(death) {
       this.gameOver();
@@ -171,29 +170,21 @@ class Game {
   gameOver() {
     this.ctx.fillStyle = "black";
     this.ctx.fillRect(0, 0, 1000, 600);
-    this.ctx.fillStyle = "red";
-    this.ctx.font = "36px 'Press Start 2P', cursive";
+    this.ctx.fillStyle = "white";
+    this.ctx.font = "36px Impulse bold";
     this.ctx.textAlign = "center";
-    this.ctx.fillText(`You survived ${this.wave} ${this.wave_s()}!`, 500, 170)
-    this.ctx.fillText("Thanks for playing!", 500, 230);
-    this.ctx.fillText("Press Enter to play again", 500, 400);
+    this.ctx.fillText(`YOU SURVIVED ${this.wave} ${this.wave_s()}!`, 500, 170)
+    this.ctx.fillText("THANKS FOR PLAYING!", 500, 230);
+    this.ctx.fillText("PRESS ENTER TO PLAY AGAIN", 500, 400);
   }
 
   wave_s() {
     if (this.wave === 1)
-      return "wave"
+      return "WAVE"
     else
-      return "waves"
+      return "WAVES"
 
   }
-
-  // step() {
-  //   this.enemy_ships.forEach(enemy_ship => {
-  //     enemy_ship.move();
-  //   });
-
-  //   this.player.move();
-  // }
 
   drawBackground(ctx) {
     ctx.fillStyle = "black";

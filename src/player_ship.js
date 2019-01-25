@@ -1,7 +1,7 @@
 import Bullet from './bullet'
 
 const playerImage = new Image();
-playerImage.src = "../ships.png";
+playerImage.src = "../dist/ships.png";
 
 // 27 x 20
 class PlayerShip {
