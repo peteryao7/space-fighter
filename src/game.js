@@ -196,10 +196,10 @@ class Game {
     ctx.fillText(`Wave: ${this.wave}`, 10, 20)
     ctx.fillText(`Bullets on screen: ${this.bulletCount()}`, 100, 20);
 
-    ctx.fillStyle = "red";
+    ctx.strokeStyle = 'red';
     ctx.beginPath();
-    ctx.moveTo(0,400);
-    ctx.lineTo(1000, 400);
+    ctx.moveTo(0,395);
+    ctx.lineTo(1000, 395);
     ctx.stroke();
 
     ctx.fillStyle = "white";
