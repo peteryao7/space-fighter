@@ -183,7 +183,6 @@ class Game {
       return "WAVE"
     else
       return "WAVES"
-
   }
 
   drawBackground(ctx) {
@@ -196,6 +195,14 @@ class Game {
     ctx.textAlign = "left";
     ctx.fillText(`Wave: ${this.wave}`, 10, 20)
     ctx.fillText(`Bullets on screen: ${this.bulletCount()}`, 100, 20);
+
+    ctx.fillStyle = "red";
+    ctx.beginPath();
+    ctx.moveTo(0,400);
+    ctx.lineTo(1000, 400);
+    ctx.stroke();
+
+    ctx.fillStyle = "white";
   }
 
   bulletCount() {
