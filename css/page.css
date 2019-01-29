@@ -1,9 +1,22 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
 .main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-image: url("../dist/starry-night.jpg");
     background-color: black;
     width: 100vw;
     height: 100vh;
-    
 }
 
 .title-page {
@@ -14,10 +27,14 @@
     font-family: 'Impact';
     font-size: 48px;
     text-align: center;
+    padding-top: 20px;
+}
+
+.game-instructions-icons {
+    margin: auto;
 }
 
 .canvas {
-    margin-top: 30px;
     background-image: url("../dist/starry-night.jpg");
     border-style: double;
     color: white;
@@ -26,14 +43,20 @@
     display: flex;
     flex-direction: column;
     width: 250px;
-    padding: 30px 40px 0 40px;
-    font-family: 'Impact';
+    padding: 0 40px 0 40px;
+    font-family: 'Arial';
     justify-content: space-between;
 }
 
 @media screen and (max-width: 1250px) {
     .instructions-description-icons-column {
     display: none;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .canvas {
+        margin-left: 20px;
     }
 }
 
