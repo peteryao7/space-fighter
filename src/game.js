@@ -12,12 +12,12 @@ class Game {
   constructor(ctx) {
     this.ctx = ctx;
     this.gameSize = { x: 1000, y: 600 };
-    this.difficulty = 0.995; 
+    this.difficulty = 0.95; 
     this.bodies = this.createEnemies(this.difficulty).concat([
       new PlayerShip(this, this.gameSize)
     ]);
 
-    this.wave = 1;
+    this.wave = 7;
 
     this.animate();
   }
@@ -198,8 +198,8 @@ class Game {
 
     ctx.strokeStyle = 'red';
     ctx.beginPath();
-    ctx.moveTo(0,395);
-    ctx.lineTo(1000, 395);
+    ctx.moveTo(0,389);
+    ctx.lineTo(1000, 389);
     ctx.stroke();
 
     ctx.fillStyle = "white";

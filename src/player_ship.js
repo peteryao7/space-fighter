@@ -7,7 +7,7 @@ playerImage.src = "../dist/ships.png";
 class PlayerShip {
   constructor(game, gameSize) {
     this.game = game;
-    this.size = {x: 10, y: 10};
+    this.size = {x: 20, y: 20};
     this.gameSize = gameSize;
     this.center = {x: this.gameSize.x / 2, y: this.gameSize.y - this.size.x };
 

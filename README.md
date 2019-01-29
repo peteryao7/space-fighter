@@ -11,6 +11,7 @@ Attack an onslaught on enemy ships attacking you head-on! Eliminate every single
 ## In-game Instructions
 
 Arrow keys - Move the ship
+
 Z - Shoot
 
 ## Architecture and Technologies
