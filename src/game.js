@@ -76,7 +76,7 @@ class Game {
     }
     
     if (enemy_ctr === 0) {
-      this.difficulty = this.difficulty - 0.075
+      this.difficulty = this.difficulty - 0.005
       this.wave += 1;
       this.bodies = this.createEnemies().concat([
         new PlayerShip(this, this.gameSize)
