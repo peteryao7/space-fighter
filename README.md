@@ -14,6 +14,10 @@ Arrow keys - Move the ship
 
 Z - Shoot
 
+## Main Screen
+
+![](https://raw.githubusercontent.com/peteryao7/space-fighter/master/main-screen.png)
+
 ## Architecture and Technologies
 - JavaScript
 - HTML5 Canvas
