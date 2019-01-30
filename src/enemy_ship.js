@@ -12,6 +12,7 @@ class EnemyShip {
     
     this.difficulty = difficulty
     this.image = image
+
   }
 
   update() {
@@ -40,53 +41,69 @@ class EnemyShip {
   }
 
   drawBullet() {
-    if (this.image < 0.1) {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
+    if (this.image < 0.05) {
+      let bullet1 = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3 }, { x: -2, y: 3 });
+      this.game.addBody(bullet1);
+      let bullet2 = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3 }, { x: 0, y: 3 });
+      this.game.addBody(bullet2);
+      let bullet3 = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3 }, { x: 2, y: 3 });
+      this.game.addBody(bullet3);
+    } else if (this.image < 0.15) {
+      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3 }, { x: 0, y: 0.5 });
       this.game.addBody(bullet);
     } else if (this.image < 0.2) {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
-      this.game.addBody(bullet);
+      let bullet1 = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3}, { x: -0.5, y: 2 });
+      this.game.addBody(bullet1);
+      let bullet2 = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3 }, { x: 0.5, y: 2 });
+      this.game.addBody(bullet2);
     } else if (this.image < 0.3) {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
-      this.game.addBody(bullet);
-    } else if (this.image < 0.4) {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
-      this.game.addBody(bullet);
-    } else if (this.image < 0.5) {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
+      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: 0, y: 6 });
       this.game.addBody(bullet);
     } else if (this.image < 0.6) {
       let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
       this.game.addBody(bullet);
-    } else if (this.image < 0.7) {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
-      this.game.addBody(bullet);
+    } else if (this.image < 0.65) {
+      for (let i = 0; i < 5; i++) {
+        let bullet = new Bullet({ x: this.center.x - 15 + 5 * i, y: this.center.y + this.size.x / 2 + 3 }, { x: 0, y: 3 });
+        this.game.addBody(bullet);
+      }
+    } else if (this.image < 0.75) {
+      let bullet1 = new Bullet({ x: this.center.x - 15, y: this.center.y + this.size.x / 2 + 3}, { x: 0.2, y: 2 });
+      this.game.addBody(bullet1);
+      let bullet2 = new Bullet({ x: this.center.x + 15, y: this.center.y + this.size.x / 2 + 3}, { x: -0.2, y: 2 });
+      this.game.addBody(bullet2);
     } else if (this.image < 0.8) {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
+      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3 }, { x: 10 * Math.random() - 5, y: 1 });
       this.game.addBody(bullet);
     } else if (this.image < 0.9) {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
-      this.game.addBody(bullet);
+      let bullet1 = new Bullet({ x: this.center.x - 15, y: this.center.y + this.size.x / 2 + 3}, { x: 0, y: 2 });
+      this.game.addBody(bullet1);
+      let bullet2 = new Bullet({ x: this.center.x + 15, y: this.center.y + this.size.x / 2 + 3 }, { x: 0, y: 2 });
+      this.game.addBody(bullet2);
     } else {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 }, { x: Math.random() - 0.5, y: 2 });
-      this.game.addBody(bullet);
+      let bullet1 = new Bullet({ x: this.center.x - 10, y: this.center.y + this.size.x / 2 + 3}, { x: Math.random() - 0.5, y: 2 });
+      this.game.addBody(bullet1);
+      let bullet2 = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3 }, { x: Math.random() - 0.5, y: 2 });
+      this.game.addBody(bullet2);
+      let bullet3 = new Bullet({ x: this.center.x + 10, y: this.center.y + this.size.x / 2 + 3 }, { x: Math.random() - 0.5, y: 2 });
+      this.game.addBody(bullet3);
     }
   }
 
   drawShip() {
-    if (this.image < 0.1) {
+    if (this.image < 0.05) {
       this.game.ctx.drawImage(shipImage, 24, 24, 27, 28, this.center.x - this.size.x / 2, this.center.y - this.size.y / 2, this.size.x, this.size.y);
-    } else if (this.image < 0.2) {
+    } else if (this.image < 0.15) {
       this.game.ctx.drawImage(shipImage, 61, 24, 28, 28, this.center.x - this.size.x / 2, this.center.y - this.size.y / 2, this.size.x, this.size.y);
-    } else if (this.image < 0.3) {
+    } else if (this.image < 0.2) {
       this.game.ctx.drawImage(shipImage, 99, 24, 27, 28, this.center.x - this.size.x / 2, this.center.y - this.size.y / 2, this.size.x, this.size.y);
-    } else if (this.image < 0.4) {
+    } else if (this.image < 0.3) {
       this.game.ctx.drawImage(shipImage, 137, 24, 27, 28, this.center.x - this.size.x / 2, this.center.y - this.size.y / 2, this.size.x, this.size.y);
-    } else if (this.image < 0.5) {
-      this.game.ctx.drawImage(shipImage, 174, 24, 28, 28, this.center.x - this.size.x / 2, this.center.y - this.size.y / 2, this.size.x, this.size.y);
     } else if (this.image < 0.6) {
+      this.game.ctx.drawImage(shipImage, 174, 24, 28, 28, this.center.x - this.size.x / 2, this.center.y - this.size.y / 2, this.size.x, this.size.y);
+    } else if (this.image < 0.65) {
       this.game.ctx.drawImage(shipImage, 212, 24, 27, 28, this.center.x - this.size.x / 2, this.center.y - this.size.y / 2, this.size.x, this.size.y);
-    } else if (this.image < 0.7) {
+    } else if (this.image < 0.75) {
       this.game.ctx.drawImage(shipImage, 249, 24, 28, 28, this.center.x - this.size.x / 2, this.center.y - this.size.y / 2, this.size.x, this.size.y);
     } else if (this.image < 0.8) {
       this.game.ctx.drawImage(shipImage, 287, 24, 27, 28, this.center.x - this.size.x / 2, this.center.y - this.size.y / 2, this.size.x, this.size.y);

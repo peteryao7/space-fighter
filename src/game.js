@@ -12,12 +12,12 @@ class Game {
   constructor(ctx) {
     this.ctx = ctx;
     this.gameSize = { x: 1000, y: 600 };
-    this.difficulty = 0.95; 
+    this.difficulty = 0.999; 
     this.bodies = this.createEnemies(this.difficulty).concat([
       new PlayerShip(this, this.gameSize)
     ]);
 
-    this.wave = 7;
+    this.wave = 1;
 
     this.animate();
   }
@@ -76,7 +76,7 @@ class Game {
     }
     
     if (enemy_ctr === 0) {
-      this.difficulty = this.difficulty - 0.005
+      this.difficulty = this.difficulty - 0.003
       this.wave += 1;
       this.bodies = this.createEnemies().concat([
         new PlayerShip(this, this.gameSize)
