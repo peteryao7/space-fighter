@@ -73,7 +73,7 @@ class EnemyShip {
       let bullet2 = new Bullet({ x: this.center.x + 15, y: this.center.y + this.size.x / 2 + 3}, { x: -0.2, y: 2 });
       this.game.addBody(bullet2);
     } else if (this.image < 0.8) {
-      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3 }, { x: 10 * Math.random() - 5, y: 1 });
+      let bullet = new Bullet({ x: this.center.x, y: this.center.y + this.size.x / 2 + 3 }, { x: 8 * Math.random() - 4, y: 1 });
       this.game.addBody(bullet);
     } else if (this.image < 0.9) {
       let bullet1 = new Bullet({ x: this.center.x - 15, y: this.center.y + this.size.x / 2 + 3}, { x: 0, y: 2 });

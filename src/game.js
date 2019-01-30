@@ -171,7 +171,7 @@ class Game {
     this.ctx.fillStyle = "black";
     this.ctx.fillRect(0, 0, 1000, 600);
     this.ctx.fillStyle = "white";
-    this.ctx.font = "36px Impulse bold";
+    this.ctx.font = "36px Arial";
     this.ctx.textAlign = "center";
     this.ctx.fillText(`YOU SURVIVED ${this.wave} ${this.wave_s()}!`, 500, 170)
     this.ctx.fillText("THANKS FOR PLAYING!", 500, 230);
