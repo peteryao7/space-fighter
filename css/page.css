@@ -48,19 +48,20 @@ body {
     justify-content: space-between;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1360px) {
     .instructions-description-icons-column {
     display: none;
     }
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1360px) {
     .canvas {
         margin-left: 20px;
     }
 }
 
 .instructions{
+    padding: 10px;
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -95,7 +96,6 @@ body {
 }
 
 .instructions-shoot {
-
     display: flex;
     justify-content: center;
 }
@@ -107,6 +107,7 @@ body {
 
 
 .description {
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
