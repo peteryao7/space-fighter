@@ -74,12 +74,12 @@ class PlayerShip {
   }
 
     updateBullet() {
-        if (this.movingDirections[4] && this.bulletCounter === 0) {
+        if (this.movingDirections[4] && this.bulletCounter === 1) {
             this.addBullet();
         }
         this.bulletCounter += 1;
 
-        if(this.bulletCounter === 15) {
+        if(this.bulletCounter === 5) {
             this.bulletCounter = 0;
         }
 
