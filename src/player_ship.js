@@ -82,7 +82,6 @@ class PlayerShip {
         if(this.bulletCounter === 5) {
             this.bulletCounter = 0;
         }
-
     }
 
     addBullet() {
