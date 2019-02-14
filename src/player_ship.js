@@ -89,7 +89,6 @@ class PlayerShip {
             { x: 0, y: -6 }
         );
         this.game.addBody(bullet);
-        
     }
 }
 
