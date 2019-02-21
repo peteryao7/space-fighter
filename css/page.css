@@ -124,10 +124,12 @@ body {
 
 .desc-1 {
     text-align: center;
+    margin-top: 15px;
 }
 
 .desc-2 {
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .desc-3 {
