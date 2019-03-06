@@ -6,7 +6,7 @@ const shipImage = new Image();
 shipImage.src = "../dist/ships.png";
 
 const playerImage = new Image();
-playerImage.src = "../dist/ships.png";
+playerImage.src = "../dist/player.png";
 
 class Game {
   constructor(ctx) {
@@ -76,7 +76,7 @@ class Game {
     }
     
     if (enemy_ctr === 0) {
-      this.difficulty = this.difficulty - 0.003
+      this.difficulty = this.difficulty - 0.001
       this.wave += 1;
       this.bodies = this.createEnemies().concat([
         new PlayerShip(this, this.gameSize)
@@ -147,10 +147,10 @@ class Game {
     } else if (body instanceof PlayerShip) {
       this.ctx.drawImage(
         playerImage,
-        550,
-        371,
-        27,
-        20,
+        0,
+        0,
+        30,
+        30,
         body.center.x - body.size.x / 2,
         body.center.y - body.size.y / 2,
         body.size.x,
