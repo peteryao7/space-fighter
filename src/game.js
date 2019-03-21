@@ -18,6 +18,7 @@ class Game {
     ]);
 
     this.wave = 1;
+    this.lives = 3;
 
     this.animate();
   }
@@ -40,14 +41,16 @@ class Game {
     let death = this.isPlayerDead();
 
 
-    if(death) {
+    if(death && this.lives > 0) {
+      this.lives -= 1;
+    }
+    if (death && this.lives === 0) {
       this.gameOver();
     }
-    else {
-      this.update();
-      this.draw(this.ctx, this.gameSize);
-      requestAnimationFrame(this.animate.bind(this));
-    }
+
+    this.update();
+    this.draw(this.ctx, this.gameSize);
+    requestAnimationFrame(this.animate.bind(this));
   }
 
   update() {
@@ -195,6 +198,7 @@ class Game {
     ctx.textAlign = "left";
     ctx.fillText(`Wave: ${this.wave}`, 10, 20)
     ctx.fillText(`Bullets on screen: ${this.bulletCount()}`, 100, 20);
+    ctx.fillText(`Lives left: ${this.lives}`, 300, 20)
 
     ctx.strokeStyle = 'red';
     ctx.beginPath();
